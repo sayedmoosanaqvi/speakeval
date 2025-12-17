@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "89647894773",
+    "project_id": "speakeval-2a29e",
+    "storage_bucket": "speakeval-2a29e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89647894773:android:cbc56f4b095dd19721b5bc",
+        "android_client_info": {
+          "package_name": "com.example.speakeval"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDEI3FiWW654vMqBHaZr9dbfwkSz7tqOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
