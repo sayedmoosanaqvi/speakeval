@@ -110,4 +110,22 @@ class FirestoreService {
       rethrow;
     }
   }
+   // ------------------------------------------------------------------
+// 5. UPDATE OPERATION (Traditional Edit/Update)
+// ------------------------------------------------------------------
+Future<void> updateEvaluation(Evaluation evaluation) async {
+  if (evaluation.id == null) return; // Cannot update without an ID
+
+  try {
+    // .doc(id) locates the record; .update() modifies the fields
+    await _evaluationsCollection.doc(evaluation.id).update(evaluation.toMap());
+    print("SUCCESS: Evaluation updated in Firebase console");
+  } on FirebaseException catch (e) {
+    print("Update failed: ${e.message}");
+    rethrow;
+  }
+}
+
+
+
 }

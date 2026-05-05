@@ -60,6 +60,37 @@ class _LoginPageState extends State<LoginPage> {
         ),
         centerTitle: true,
         foregroundColor: Colors.black,
+        actions: [
+          // Test button in AppBar
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Tooltip(
+              message: "Skip to Home (Testing Only)",
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.deepOrangeAccent,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Home()),
+                    );
+                  },
+                  child: const Text(
+                    "Test",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -129,8 +160,10 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     const Text(
                       "Forgot Your Password?",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
                     ),
                     TextButton(
                       onPressed: () {
